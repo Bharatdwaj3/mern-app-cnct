@@ -12,8 +12,7 @@ function Home() {
     <>
       <Banner/>
       <TopMedia/>
-      <Footer/>
-              
+      <Footer/>  
     </>
   )
 }

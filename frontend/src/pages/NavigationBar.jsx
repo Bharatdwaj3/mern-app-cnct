@@ -8,7 +8,7 @@ function NavigationBar() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                     <Nav.Link as={Link} to="/form/">Form</Nav.Link>
+                    <Nav.Link as={Link} to="/form/">Form</Nav.Link>
                     <Nav.Link as={Link} to="/movies/">Movies</Nav.Link>
                     <Nav.Link as={Link} to="/tv_shows/">TV Shows</Nav.Link>
                     <Nav.Link as={Link} to="/imppeople">Peeople</Nav.Link>
