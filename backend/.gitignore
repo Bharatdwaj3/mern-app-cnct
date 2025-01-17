@@ -1,27 +1,44 @@
 # Node.js
 node_modules/
-.env
-.env.local
-.env.*.local
-
-# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# React build files
-build/
-dist/
+# Environment Variables
+.env
+.env.local
+.env.*.local
 
-# Editor-specific files
-.vscode/
-.idea/
-*.sublime-workspace
+# Logs
+logs/
+*.log
+*.log.*
+
+# Database-related files
+*.db
+*.sqlite
+*.mongo
+dump/
+
+# Build files
+dist/
+build/
 
 # OS-specific files
 .DS_Store
 Thumbs.db
+
+# Temp files
+*.tmp
+*.swp
+*.bak
+*.pid
+
+# Editor-specific files
+.idea/
+.vscode/
+*.sublime-workspace
 
 # Dependency directories
 bower_components/
@@ -30,26 +47,15 @@ jspm_packages/
 # Testing
 coverage/
 
-# Temp files
-*.temp
-*.swp
-*.log
-*.env
-
 # Ignore lock files
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
-# Ignore generated files by Parcel, Webpack, etc.
-.cache/
-.parcel-cache/
-*.babelrc
+# Ignore Docker
+docker-compose.override.yml
+.dockerignore
 
-# Ignore lint-related files
-.eslintcache
-.stylelintcache
-
-# Ignore React specific
-*.env.development.local
-*.env.production.local
+# Ignore PM2 logs and configs
+pm2_logs/
+*.pm2/
