@@ -24,6 +24,8 @@ function NavBar() {
           </button>
           <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div className="navbar-nav">
+              
+
               <li className="nav-item">
                 <Link to="/discover/movies" className="nav-link active">
                   Movies
@@ -35,8 +37,8 @@ function NavBar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/imppeople" className="nav-link">
-                  People
+                <Link to="/mform" className="nav-link">
+                  Profile
                 </Link>
               </li>
 

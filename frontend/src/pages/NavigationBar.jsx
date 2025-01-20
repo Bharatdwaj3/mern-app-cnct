@@ -7,11 +7,11 @@ function NavigationBar() {
             <Navbar.Brand as={Link} to="/">Home</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
+                <Nav className="ml-auto">
                     <Nav.Link as={Link} to="/movies/">Movies</Nav.Link>
+                    <Nav.Link as={Link} to="/mform">Form</Nav.Link>
                     <Nav.Link as={Link} to="/tv_shows/">TV Shows</Nav.Link>
                     <Nav.Link as={Link} to="/imppeople">People</Nav.Link>
-                    <Nav.Link as={Link} to="/mform">Form</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
