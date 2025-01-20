@@ -6,7 +6,7 @@ import PeopleDetails from './helpers/People/PeopleDetails';
 import MDetails from './helpers/Movies_/MDetails';
 import TV_Show_Details from './helpers/TV_shows/TV_Show_Details';
 import NavBar from './components/NavBar';
-import Form from './pages/Form'
+import MForm from './pages/MForm'
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/form" element={<Form />} />
+        <Route path="/mform" element={<MForm />} />
         <Route path="/discover/movies/:id" element={<MDetails />} />
         <Route path="/discover/tv_shows/:id" element={<TV_Show_Details />} />
         <Route path="/discover/*" element={<DiscoverMedia />} />

@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import axios from "axios";
 import { useState, useEffect } from "react";
-
 import Pagination from "../components/Pagination";
 import Filter from "../components/Filter";
 import { Routes, Route } from 'react-router-dom';
