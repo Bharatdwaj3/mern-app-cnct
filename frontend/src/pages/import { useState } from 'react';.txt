@@ -12,13 +12,17 @@ function MForm() {
 
   const handleLoginFailure = () => {
     setLoginFailed(true);
+    setIsLoggedIn(false);
+    console.log('Login failed');
   };
 
   return (
     <>
-     {!isLoggedIn?(<Log_In onLoginSuccess={handleLoginSuccess} onLoginFailure={handleLoginFailure} />):(
-      !isLoggedIn&&loginFailed?(<Register/>):(<p>Welcome Back On Loggin In</p>)
-     )}
+      {!isLoggedIn && loginFailed ? (<Register />) : 
+        !isLoggedIn?(
+      <Log_In onLoginSuccess={handleLoginSuccess} onLoginFailure={handleLoginFailure} />
+      ):(<p>Welcome Back! You are logged</p>
+      )}
     </>
   );
 }

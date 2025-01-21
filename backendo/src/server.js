@@ -19,7 +19,7 @@ connectDB();
 
 
 
-app.post('/register',async(req,res)=>{
+app.post('/mform/register',async(req,res)=>{
     const { name, username, email, password} = req.body;
     console.log("Received data:", req.body);
     
@@ -38,7 +38,7 @@ app.post('/register',async(req,res)=>{
     }
 
 });
-app.post('/log_in',async(req,res)=>{
+app.post('/mform/log_in',async(req,res)=>{
     const { name, username, email, password} = req.body;
     console.log("Received data:", req.body);
     
@@ -48,19 +48,18 @@ app.post('/log_in',async(req,res)=>{
     }
 
     try{
-        const user=await User.findOne({email});
-
-    if(!user){
-        return res.status(404).json({message:"Not found!!"});
-    }
-    res.status(200).json({message:"Login Success",user});
-    }catch(error){
-        console.error('Error loging in!!',error);
-        res.status(500).json({message:'Server error'});
-    }
-
+        const user=await User.findOne({username});
+            if(!user){
+                return res.status(404).json({message:"Not found!!"});
+            }else{
+                 res.status(200).json({message:"Login Success",user});
+            }
+        }catch(error){
+            console.error('Error loging in!!',error);
+            res.status(500).json({message:'Server error'});
+        }
 });
-app.post('/log_out',async(req,res)=>{
+app.post('/mform/log_out',async(req,res)=>{
     const { name, username, email, password} = req.body;
     console.log("Received data:", req.body);
     
